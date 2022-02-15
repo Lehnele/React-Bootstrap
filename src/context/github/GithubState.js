@@ -42,7 +42,7 @@ export const GithubState = ({ children }) => {
 
         dispatch({
             type: GET_USER,
-            payload: {}
+            payload: response.data
         })
     }
 

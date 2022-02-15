@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Search } from '../components/Search';
 import { Card } from '../components/Card';
 import { GithubContext } from '../context/github/githubContext';
+import { Loader } from "../components/Loader";
 
 export const Home = () => {
     const {loading, users} = useContext(GithubContext)
@@ -14,15 +15,7 @@ export const Home = () => {
 
                 {
                     loading
-                    ?
-
-                        <div className="d-flex justify-content-center align-items-center text-primary">
-                            <div className="spinner-border" role="status">
-                                <span className="visually-hidden">Loading...</span>
-                            </div>
-                        </div>
-
-
+                    ? <Loader/>
                         : users.map(user => (
                         <div className='col-sm-4 mb-4' key={user.id}>
                             <Card user={user}/>
