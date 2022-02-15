@@ -14,8 +14,16 @@ export const Home = () => {
 
                 {
                     loading
-                    ? <p className="text_center">Загрузка...</p>
-                    : users.map(user => (
+                    ?
+
+                        <div className="d-flex justify-content-center align-items-center text-primary">
+                            <div className="spinner-border" role="status">
+                                <span className="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+
+
+                        : users.map(user => (
                         <div className='col-sm-4 mb-4' key={user.id}>
                             <Card user={user}/>
                         </div>
