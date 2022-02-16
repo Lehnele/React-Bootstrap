@@ -1,4 +1,4 @@
-import { Navbar } from './components/Navbar';
+import { NavBar } from './components/Navbar';
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
@@ -12,7 +12,7 @@ function App() {
         <GithubState>
             <AlertState>
                 <BrowserRouter>
-                    <Navbar/>
+                    <NavBar/>
                     <div className='container pt-4'>
                         <Alert alert={{text: 'Test alert'}}/>
                         <Routes>
